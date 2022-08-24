@@ -47,7 +47,7 @@
 //             | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
    &trans  &trans &trans &trans   &trans     &kp HOME &kp DEL  &kp UP   &kp PG_UP &kp PSCRN
-   &trans  &trans &trans &trans   &trans     &kp END  &kp LEFT &kp DOWN &kp RBKT  &kp RSHFT
+   &trans  &trans &trans &trans   &trans     &kp END  &kp LEFT &kp DOWN &kp RIGHT &kp RSHFT
    &trans  &trans &trans &kp LBKT &kp LPAR   &kp RPAR &kp RBKT &kp RET  &kp PG_DN &kp INS
                   &trans &mo 3    &trans     &trans   &trans   &trans
                         >;
