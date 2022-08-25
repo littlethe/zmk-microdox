@@ -19,9 +19,9 @@
 // |  Z  |  X  |  C  |  V  |  B   |   |  N  |  M   |  ,  |  .  |  /  |
 //             | GUI | NAV | SHFT |   | SPC | SYM  | ALT |
                         bindings = <
-   &kp Q &kp W &kp F    &kp P &kp B       &kp J     &kp L &kp U     &kp Y   &lt LALT SEMI
+   &kp Q &kp W &kp F    &kp P &kp B       &kp J     &kp L &kp U     &kp Y   &mt LALT SEMI
    &kp A &kp R &kp S    &kp T &kp G       &kp M     &kp N &kp E     &kp I   &kp O
-   &kp Z &kp X &kp C    &kp D &kp V       &kp K     &kp H &kp COMMA &kp DOT &lt LGUI FSLH
+   &kp Z &kp X &kp C    &kp D &kp V       &kp K     &kp H &kp COMMA &kp DOT &mt LGUI FSLH
                &kp BSPC &mo 1 &kp LCTRL   &kp LSHFT &mo 2 &kp SPACE
                         >;
                 };
@@ -32,10 +32,10 @@
 // | BT2 |     |     |      |     |   |  \  | ENT  |      |     |      |
 //             |     |      |     |   |     |      |      |
                         bindings = <
-   &kp ESC &kp N4 &kp N5 &kp N6 &kp EQUAL     &kp GRAVE &kp PLUS &kp MINUS &kp STAR &kp SLASH
-   &kp N0  &kp N1 &kp N2 &kp N3 &kp MINUS     &kp LBKT  &kp LPAR &kp SQT   &kp RPAR &kp RBKT
-   &kp TAB &kp N7 &kp N8 &kp N9 &kp DOT       &trans    &kp BSLH &trans    &trans   &trans
-                  &trans &trans &trans        &mo 3     &trans   &trans
+   &kp ESC &kp N4 &kp N5     &kp N6 &kp EQUAL     &kp GRAVE &kp PLUS &kp MINUS &kp STAR &kp SLASH
+   &kp N0  &kp N1 &kp N2     &kp N3 &kp MINUS     &kp LBKT  &kp LPAR &kp SQT   &kp RPAR &kp RBKT
+   &kp TAB &kp N7 &kp N8     &kp N9 &kp DOT       &trans    &kp BSLH &trans    &trans   &trans
+                  &bt BT_CLR &trans &trans        &mo 3     &trans   &trans
                         >;
                 };
 
