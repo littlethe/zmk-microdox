@@ -43,9 +43,9 @@
 // |  Z  |  X  |  C  |  V  |  B   |   |  N  |  M   |  ,  |  .  |  /  |
 //             | GUI | NAV | SHFT |   | SPC | SYM  | ALT |
                         bindings = <
-   &kp Q &kp W &kp F    &kp P &kp B       &kp J     &kp L &kp U     &kp Y   &kp SEMI
+   &kp Q &kp W &kp F    &kp P &kp B       &kp J     &kp L &kp U     &kp Y   &mt LALT SEMI
    &kp A &kp R &kp S    &kp T &kp G       &kp M     &kp N &kp E     &kp I   &kp O
-   &kp Z &kp X &kp C    &kp D &kp V       &kp K     &kp H &kp COMMA &kp DOT &kp FSLH
+   &kp Z &kp X &kp C    &kp D &kp V       &kp K     &kp H &kp COMMA &kp DOT &mt LGUI FSLH
                &kp BSPC &mo 1 &kp LCTRL   &kp LSHFT &mo 2 &kp SPACE
                         >;
                 };
@@ -56,10 +56,10 @@
 // | BT2 |     |     |      |     |   |  \  | ENT  |      |     |      |
 //             |     |      |     |   |     |      |      |
                         bindings = <
-   &kp ESC &kp N4 &kp N5     &kp N6 &kp EQUAL     &kp GRAVE &kp PLUS &kp MINUS &kp STAR &kp SLASH
-   &kp N0  &kp N1 &kp N2     &kp N3 &kp MINUS     &kp LBKT  &kp LPAR &kp SQT   &kp RPAR &kp RBKT
-   &kp TAB &kp N7 &kp N8     &kp N9 &kp DOT       &trans    &kp BSLH &trans    &trans   &trans
-                  &trans     &trans &mo 4         &trans    &mo 3    &trans
+   &kp ESC &kp N4 &kp N5 &kp N6 &kp EQUAL     &kp GRAVE &kp PLUS &kp MINUS &kp STAR &kp SLASH
+   &kp N0  &kp N1 &kp N2 &kp N3 &kp MINUS     &kp LBKT  &kp LPAR &kp SQT   &kp RPAR &kp RBKT
+   &kp TAB &kp N7 &kp N8 &kp N9 &kp DOT       &trans    &kp BSLH &trans    &trans   &trans
+                  &trans &trans &mo 4         &trans    &mo 3    &trans
                         >;
                 };
 
@@ -70,10 +70,10 @@
 // |     |     |     |     |     |   |  _  |  +  |  [  |  ]  |  \  |
 //             | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-   &bt BT_CLR   &bt BT_SEL 4 &bt BT_SEL 5 &bt BT_SEL 6 &bt BT_PRV     &kp HOME &kp DEL  &kp UP   &kp PG_UP &kp PSCRN
-   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_NXT     &kp END  &kp LEFT &kp DOWN &kp RIGHT &kp RSHFT
-   &trans       &trans       &trans       &kp LBKT     &kp LPAR       &kp RPAR &kp RBKT &kp RET  &kp PG_DN &kp INS
-                             &trans       &mo 3        &trans         &trans   &trans   &trans
+   &trans &trans &trans &trans   &trans     &kp HOME &kp DEL  &kp UP   &kp PG_UP &kp PSCRN
+   &trans &trans &trans &trans   &trans     &kp END  &kp LEFT &kp DOWN &kp RIGHT &kp RSHFT
+   &trans &trans &trans &kp LBKT &kp LPAR   &kp RPAR &kp RBKT &kp RET  &kp PG_DN &kp INS
+                 &trans &mo 3    &trans     &mo 4    &trans   &trans
                         >;
                 };
 
@@ -99,10 +99,10 @@
 // |     |     |     |     |     |   |  _  |  +  |  [  |  ]  |  \  |
 //             | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-   &bt BT_CLR   &bt BT_SEL 4 &bt BT_SEL 5 &bt BT_SEL 6 &bt BT_PRV     &trans  &trans  &trans  &trans  &trans
-   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_NXT     &trans  &trans  &trans  &trans  &trans
-   &trans       &trans       &trans       &trans       &trans         &trans  &trans  &trans  &trans  &trans
-                             &trans       &trans       &trans         &trans  &trans  &trans
+   &bt BT_CLR   &bt BT_SEL 4 &bt BT_SEL 5 &bt BT_SEL 6 &bt BT_PRV     &bt BT_PRV  &bt BT_SEL 6 &bt BT_SEL 5 &bt BT_SEL 4 &bt BT_CLR
+   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_NXT     &bt BT_NXT  &bt BT_SEL 3 &bt BT_SEL 2 &bt BT_SEL 1 &bt BT_SEL 0
+   &trans       &trans       &trans       &trans       &trans         &trans      &trans       &trans       &trans       &trans
+                             &trans       &trans       &trans         &trans      &trans       &trans
                         >;
                 };
         };
