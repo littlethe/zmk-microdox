@@ -35,69 +35,47 @@
 
         keymap {
                 compatible = "zmk,keymap";
-
                 default_layer {
-// -----------------------------------------------------------------------------------------
-// |  Q  |  W  |  E  |  R  |  T   |   |  Y  |  U   |  I  |  O  |  P  |
-// |  A  |  S  |  D  |  F  |  G   |   |  H  |  J   |  K  |  L  |  ;  |
-// |  Z  |  X  |  C  |  V  |  B   |   |  N  |  M   |  ,  |  .  |  /  |
-//             | GUI | NAV | SHFT |   | SPC | SYM  | ALT |
                         bindings = <
-   &kp Q &kp W &kp F    &kp P &kp B       &kp J     &kp L &kp U     &kp Y   &mt LALT SEMI
-   &kp A &kp R &kp S    &kp T &kp G       &kp M     &kp N &kp E     &kp I   &kp O
-   &kp Z &kp X &kp C    &kp D &kp V       &kp K     &kp H &kp COMMA &kp DOT &mt LGUI FSLH
-               &kp BSPC &mo 1 &kp LCTRL   &kp LSHFT &mo 2 &kp SPACE
+   &kp Q &kp W &kp F    &kp P &kp B   &kp J       &kp L     &kp U         &kp Y     &mt LALT SEMI
+   &kp A &kp R &kp S    &kp T &kp G   &kp M       &kp N     &kp E         &kp I     &kp O
+   &kp Z &kp X &kp C    &kp D &kp V   &kp K       &kp H     &kp COMMA     &kp DOT   &mt LGUI FSLH
+               &kp BSPC &mo num_layer &kp LCTRL   &kp LSHFT &mo nav_layer &kp SPACE
                         >;
                 };
                 num_layer {
-// -----------------------------------------------------------------------------------------
-// |BTCLR|     | ESC |  ~   |     |   | TAB | HOME |  UP  | END | DEL  |
-// | BT1 | GUI | ALT | CTRL | NUM |   |  /  | LEFT | DOWN | RGT | BKSP |
-// | BT2 |     |     |      |     |   |  \  | ENT  |      |     |      |
-//             |     |      |     |   |     |      |      |
                         bindings = <
-   &kp ESC &kp N4 &kp N5 &kp N6 &kp EQUAL     &kp GRAVE &kp PLUS &kp MINUS &kp STAR &kp SLASH
-   &kp N0  &kp N1 &kp N2 &kp N3 &kp MINUS     &kp LBKT  &kp LPAR &kp SQT   &kp RPAR &kp RBKT
-   &kp TAB &kp N7 &kp N8 &kp N9 &kp DOT       &trans    &kp BSLH &trans    &trans   &trans
-                  &trans &trans &mo 4         &trans    &mo 3    &trans
+   &kp ESC &kp N4 &kp N5        &kp N6 &kp EQUAL      &kp GRAVE &kp PLUS         &kp MINUS &kp STAR &kp SLASH
+   &kp N0  &kp N1 &kp N2        &kp N3 &kp MINUS      &kp LBKT  &kp LPAR         &kp SQT   &kp RPAR &kp RBKT
+   &kp TAB &kp N7 &kp N8        &kp N9 &kp DOT        &trans    &kp BSLH         &trans    &trans   &trans
+                  &mo bt_layer  &trans &mo sym_layer  &trans    &mo sys_layer    &trans
                         >;
                 };
-
                 nav_layer {
-// -----------------------------------------------------------------------------------------
-// |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |
-// |     |     |     |     |     |   |  -  |  =  |  {  |  }  | "|" |
-// |     |     |     |     |     |   |  _  |  +  |  [  |  ]  |  \  |
-//             | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-   &trans &trans &trans &trans   &trans     &kp HOME &kp DEL  &kp UP   &kp PG_UP &kp PSCRN
-   &trans &trans &trans &trans   &trans     &kp END  &kp LEFT &kp DOWN &kp RIGHT &kp RSHFT
-   &trans &trans &trans &kp LBKT &kp LPAR   &kp RPAR &kp RBKT &kp RET  &kp PG_DN &kp INS
-                 &trans &mo 3    &trans     &mo 4    &trans   &trans
+   &trans &trans &trans &trans   &trans     &kp HOME      &kp DEL  &kp UP   &kp PG_UP &kp PSCRN
+   &trans &trans &trans &trans   &trans     &kp END       &kp LEFT &kp DOWN &kp RIGHT &kp RSHFT
+   &trans &trans &trans &kp LBKT &kp LPAR   &kp RPAR      &kp RBKT &kp RET  &kp PG_DN &kp INS
+                 &trans &mo 3    &trans     &mo sys_layer &trans   &mo bt_layer
                         >;
                 };
-
-// This layer is unreachable until "tri layer state" is sorted out.
-// Leaving it here for completeness.
-                sys_layer {
-// -----------------------------------------------------------------------------------------
-// |     |     |     |     |     |   |  A  |  7  |  8  |  9  |  D  |
-// |     |     |     |     |     |   |  B  |  4  |  5  |  6  |  E  |
-// |     |     |     |     |     |   |  C  |  1  |  2  |  3  |  F  |
-//             |     |     |     |   |  0  |  .  |     |
+                sym_layer {
                         bindings = <
-   &trans  &kp F4 &kp F5 &kp F6 &trans    &kp CAPS &kp PSCRN &kp SLCK &kp PAUSE_BREAK &kp LNLCK
-   &kp F10 &kp F1 &kp F2 &kp F3 &kp F11   &trans   &trans    &trans   &trans          &trans
-   &trans  &kp F7 &kp F8 &kp F9 &kp F12   &trans   &trans    &trans   &trans          &trans
-                  &trans &trans &trans    &trans   &trans    &trans
+   &kp GRAVE &kp PLUS &kp MINUS &kp STAR &kp SLASH   &kp GRAVE &kp PLUS  &kp MINUS &kp STAR &kp SLASH
+   &kp LBKT  &kp LPAR &kp SQT   &kp RPAR &kp RBKT    &kp LBKT  &kp LPAR  &kp SQT   &kp RPAR &kp RBKT
+   &trans    &trans   &trans    &kp BSLH &trans      &trans    &kp BSLH  &trans    &trans   &trans
+                      &trans    &trans   &trans      &trans    &trans    &trans
+                        >;
+                };
+                sys_layer {
+                        bindings = <
+   &kp CAPS &kp F4 &kp F5 &kp F6 &kp PSCRN   &kp PSCRN &kp F6 &kp F5 &kp F4 &kp CAPS
+   &kp F10  &kp F1 &kp F2 &kp F3 &kp F11     &kp F11   &kp F3 &kp F2 &kp F1 &kp F10
+   &trans   &kp F7 &kp F8 &kp F9 &kp F12     &kp F12   &kp F9 &kp F8 &kp F7 &trans
+                   &trans &trans &trans      &trans    &trans &trans
                         >;
                 };
                 bt_layer {
-// -----------------------------------------------------------------------------------------
-// |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |
-// |     |     |     |     |     |   |  -  |  =  |  {  |  }  | "|" |
-// |     |     |     |     |     |   |  _  |  +  |  [  |  ]  |  \  |
-//             | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
    &bt BT_CLR   &bt BT_SEL 4 &bt BT_SEL 5 &bt BT_SEL 6 &bt BT_PRV     &bt BT_PRV  &bt BT_SEL 6 &bt BT_SEL 5 &bt BT_SEL 4 &bt BT_CLR
    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_NXT     &bt BT_NXT  &bt BT_SEL 3 &bt BT_SEL 2 &bt BT_SEL 1 &bt BT_SEL 0
