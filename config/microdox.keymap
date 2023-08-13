@@ -52,15 +52,15 @@
                 };
                 num_layer {
                         bindings = <
-   &kp ESC &kp N4 &kp N5        &kp N6 &kp EQUAL      &kp GRAVE &kp PLUS         &kp MINUS &kp STAR &kp SLASH
-   &kp N0  &kp N1 &kp N2        &kp N3 &kp MINUS      &kp LBKT  &kp LPAR         &kp SQT   &kp RPAR &kp RBKT
-   &kp TAB &kp N7 &kp N8        &kp N9 &kp DOT        &trans    &kp BSLH         &trans    &trans   &trans
+   &kp DOT &kp N4 &kp N5        &kp N6 &kp EQUAL      &kp GRAVE &kp PLUS         &kp MINUS &kp STAR &kp SLASH
+   &kp N0  &kp N1 &kp N2        &kp N3 &kp SQT        &kp LBKT  &kp LPAR         &kp SQT   &kp RPAR &kp RBKT
+   &kp TAB &kp N7 &kp N8        &kp N9 &kp MINUS      &trans    &kp BSLH         &trans    &trans   &trans
                   &mo bt_layer  &trans &mo sym_layer  &trans    &mo sys_layer    &trans
                         >;
                 };
                 nav_layer {
                         bindings = <
-   &trans &trans &trans &trans   &trans     &kp HOME      &kp DEL  &kp UP   &kp PG_UP &kp PSCRN
+   &trans &trans &trans &trans   &trans     &kp HOME      &kp DEL  &kp UP   &kp PG_UP &kp ESC
    &trans &trans &trans &trans   &trans     &kp END       &kp LEFT &kp DOWN &kp RIGHT &kp RSHFT
    &trans &trans &trans &kp LBKT &kp LPAR   &kp RPAR      &kp RBKT &kp RET  &kp PG_DN &kp INS
                  &trans &trans   &trans     &mo sys_layer &trans   &mo bt_layer
@@ -86,7 +86,7 @@
                         bindings = <
    &kp GRAVE &kp PLUS &kp MINUS &kp STAR &kp SLASH   &kp GRAVE &kp PLUS  &kp MINUS &kp STAR &kp SLASH
    &kp LBKT  &kp LPAR &kp SQT   &kp RPAR &kp RBKT    &kp LBKT  &kp LPAR  &kp SQT   &kp RPAR &kp RBKT
-   &trans    &trans   &trans    &kp BSLH &trans      &trans    &kp BSLH  &trans    &trans   &trans
+   &trans    &trans   &kp PSCRN &kp BSLH &trans      &trans    &kp BSLH  &trans    &trans   &trans
                       &trans    &trans   &trans      &trans    &trans    &trans
                         >;
                 };
